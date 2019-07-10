@@ -52,8 +52,8 @@ void updateIMU() {
     
     IMU.updateTime();
     
-    //MadgwickFilter.updateIMU(IMU.gx, IMU.gy, IMU.gz, IMU.ax, IMU.ay, IMU.az);
-    MadgwickFilter.update(IMU.gx, IMU.gy, IMU.gz, IMU.ax, IMU.ay, IMU.az, IMU.my, IMU.mx, IMU.mz);
+    MadgwickFilter.updateIMU(IMU.gx, IMU.gy, IMU.gz, IMU.ax, IMU.ay, IMU.az);
+    //MadgwickFilter.update(IMU.gx, IMU.gy, IMU.gz, IMU.ax, IMU.ay, IMU.az, IMU.my, IMU.mx, IMU.mz);
     
     IMU.delt_t = millis() - IMU.count;
 
